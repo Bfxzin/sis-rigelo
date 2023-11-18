@@ -103,7 +103,7 @@
     box-sizing: border-box;
 }
 
-button {
+button .registro{
     /* estilo de botão */
     border-radius: 90px;
     background-color: white;

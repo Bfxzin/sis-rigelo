@@ -19,6 +19,7 @@ body {
     background-color: black;
     background-image: url(../files/fundo.jpg);
     background-size: 120vw;
+    background-attachment: fixed;
     background-position-x: right;
 }
 
