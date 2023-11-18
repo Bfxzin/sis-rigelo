@@ -16,6 +16,6 @@ if($conexao->connect_errno)
 else
 {
     echo 'conexao feita com sucesso';
-}
-
+} 
+    
 ?>

@@ -1,3 +1,23 @@
+<?php
+if (isset($_POST["submit"]))
+
+{
+  include_once('../EndPoint/conexao.php');
+
+$Nome = $_POST["nome"];
+$Sobrenome = $_POST["sobrenome"];
+$Email = $_POST["email"];
+$Senha = $_POST["senha"];
+$Cpfcnpj = $_POST["cpfcnpj"];
+$Cep = $_POST["cep"];
+$Numcasa = $_POST["numcasa"];
+$Telefone = $_POST["telefone"];
+
+$result = mysqli_query($conexao , "INSERT INTO  cadastro(nome,sobrenome,email,senha,cpfcnpj,cep,numcasa,telefone)
+                                  VALUES('$Nome','$Sobrenome','$Email','$Senha','$Cpfcnpj','$Cep','$Numcasa','$Telefone')");
+}
+
+?>
 
 
 <!DOCTYPE html>
