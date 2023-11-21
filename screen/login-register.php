@@ -56,7 +56,7 @@ if (isset($_POST["submit"])) {
   
   <script src="../scriptjs/navbar.js"></script>
   <script src="../scriptjs/screen-register.js"></script> <!-- conexão java script tela login-registro -->
-  <link rel="stylesheet" href="../style/style.css"> <!-- conexão com css estilo clone (nav bar, background.etc) -->
+  <link rel="stylesheet" href="../style/globals.css"> <!-- conexão com css estilo clone (nav bar, background.etc) -->
   
 </body>
 
