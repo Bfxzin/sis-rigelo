@@ -1,6 +1,7 @@
 /* estilização pagina inicial */
 
-#slogan {  /*  estilo de stolgan */
+#slogan {
+    /*  estilo de stolgan */
     width: 50vw;
     margin-right: 132px;
     margin-top: calc(50vh - 134px - 168px);
@@ -18,17 +19,18 @@
     line-height: 40px;
 } */
 
-#slogan h1 {  /* estilo titulo do stolgan */
-    font-family: 'post-no-bills-jaffna-extrabold', sans-serif;
+#slogan h1 {
+    /* estilo titulo do stolgan */
     font-size: 120px;
     line-height: 40px;
     text-transform: uppercase;
+    font-family: 'post-no-bills-jaffna-extrabold', sans-serif;
 }
 
-#slogan h2 {  
-    font-family: 'post-no-bills-jaffna-extrabold', sans-serif;
+#slogan h2 {
     font-size: 65px;
     text-transform: uppercase;
+    font-family: 'post-no-bills-jaffna-extrabold', sans-serif;
 }
 
 #slogan p {

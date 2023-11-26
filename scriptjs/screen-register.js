@@ -1,19 +1,19 @@
 const loginContainer = `
 <div class="box-login">
-<form action="login-register.php" method="POST">
+<form action="php/session/usuario_login.php" method="POST">
   <h2>Login</h2>
   <div class="mb-3">
     <label for="inputEmail" id="email" class="form-label">Email</label>
-    <input type="email" class="form-control" id="inputEmail" placeholder="email@example.com">
+    <input type="email" class="form-control" id="inputEmail" name="email" placeholder="email@example.com">
   </div>
   <div class="mb-3">
     <label for="inputPassword" id="password" class="form-label">Senha</label>
-    <input type="password" class="form-control" id="inputPassword">
+    <input type="password" class="form-control" id="inputPassword" name="senha">
   </div>
 
   <div class="button-container"> 
-    <a href="">Esqueci a senha</a><br><br>
-    <button class="registro" type="button">Cadastre-se</button>
+    <a href="#" onclick="exibe_guia(\'btn_trocar_senha\')>Esqueci a senha</a><br><br>
+    <button class="register" type="button">Cadastre-se</button>
   </div>
   <button class="entrar" type="submit">Entrar</button>
 </form>
@@ -21,11 +21,11 @@ const loginContainer = `
 `;
 
 const registerContainer = `
-<div class="form-registro">
+<div class="form-registro"> 
   <h2>Registro</h2>
 
   <div class="table-register">
-    <form class="form-reginho" action="login-register.php" method="POST">
+    <form class="form-reginho" action="php/session/cadastrar_usuario.php" method="POST">
       <div class="nomeum">
         <label for="inputname" class="form-label">Primeiro nome</label>
         <input type="text" class="form-control" oninput="restrictInput(this, /[^A-Za-z]/g, 70);" id="inputname" name="nome" placeholder="João" required>
@@ -80,17 +80,16 @@ const registerContainer = `
 function restrictInput(element, pattern, maxLength) { /* respeitando o padrao de caracteres */
   element.value = element.value.replace(pattern, '');
 
-  if (element.value.length > maxLength) { /* respeitando a quantia de caracteres */
+  if (element.value.length > maxLength) /* respeitando a quantia de caracteres */
     element.value = element.value.substring(0, maxLength);
-  }
 }
 
 const component = document.querySelector('#login-register-component');
-
 component.innerHTML = loginContainer;
-const button = document.querySelector('.registro');
-console.log(button);
 
-button.onclick = () => {
-  component.innerHTML = registerContainer;
-};
+const button = document.querySelector('.register');
+
+if (button)
+  button.onclick = () => {
+    component.innerHTML = registerContainer;
+  }

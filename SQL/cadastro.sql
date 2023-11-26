@@ -27,12 +27,12 @@ SET time_zone = "+00:00";
 -- Estrutura para tabela `cadastro`
 --
 
-CREATE TABLE `cadastro` (
-  `idc` int(11) NOT NULL,
-  `nome` varchar(70) NOT NULL,
-  `sobrenome` varchar(120) NOT NULL,
-  `email` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+CREATE TABLE cadastro (
+  idc int(11) NOT NULL PRIMARY KEY,
+  nome varchar(70) NOT NULL,
+  sobrenome varchar(120) NOT NULL,
+  email varchar(200) NOT NULL
+) engine=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Índices para tabelas despejadas
@@ -41,9 +41,6 @@ CREATE TABLE `cadastro` (
 --
 -- Índices de tabela `cadastro`
 --
-ALTER TABLE `cadastro`
-  ADD PRIMARY KEY (`idc`);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

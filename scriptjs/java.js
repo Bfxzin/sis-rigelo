@@ -1,3 +1,5 @@
+let ult_alvo = ""
+
 // Função para verificar se um elemento está visível no viewport
 function isElementInViewport(el) {
     const rect = el.getBoundingClientRect();
@@ -23,4 +25,33 @@ window.addEventListener('scroll', handleScroll);
 // Execute a função ao carregar a página para verificar os elementos visíveis inicialmente
 window.addEventListener('load', handleScroll);
 
+function exibe_guia(obj_alvo) {
 
+    if (!obj_alvo)
+        return
+
+    const cases = {
+        "slogan": "slogan",
+        "btn_login_registro": "login-register-component",
+        "btn-services": "services-component",
+        "btn_contact": "contact-component",
+        "btn_trocar_senha": "change-password-component"
+    }
+
+    console.log("a", obj_alvo)
+
+    const alvo = document.getElementById(cases[obj_alvo])
+
+    Object.keys(cases).forEach(key => {
+        console.log(key, cases[key])
+
+        document.getElementById(cases[key]).style.display = "none"
+    })
+
+    // Mostrando novamente o alvo selecionado
+    if (alvo)
+        if (alvo.style.display == "none")
+            alvo.style.display = "block"
+
+    ult_alvo = obj_alvo
+}

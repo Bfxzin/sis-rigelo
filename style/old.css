@@ -1,6 +1,6 @@
 #home {
     background-color: black;
-    background-image: url(../files/fundo.jpg);
+    background-image: url("../files/fundo.jpg");
     background-size: cover;
 }
 
@@ -103,7 +103,7 @@
     box-sizing: border-box;
 }
 
-button .registro{
+button .registro {
     /* estilo de botão */
     border-radius: 90px;
     background-color: white;
@@ -120,7 +120,8 @@ button:hover {
     border-color: white;
 }
 
-.form-registro { /* sem aparecer o formulario de registro  */
+.form-registro {
+    /* sem aparecer o formulario de registro  */
     display: none;
 }
 
