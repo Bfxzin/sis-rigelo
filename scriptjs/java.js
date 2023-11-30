@@ -31,9 +31,10 @@ function exibe_guia(obj_alvo) {
         return
 
     const cases = {
-        "slogan": "slogan",
+        "btn_home_page": "home-page-component",
         "btn_login_registro": "login-register-component",
-        "btn-services": "services-component",
+        "btn_products": "products-component",
+        "btn_comodato": "comodato-component",
         "btn_contact": "contact-component",
         "btn_trocar_senha": "change-password-component"
     }

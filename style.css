@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+@font-face {
+    font-family: 'post-no-bills-jaffna-extrabold';
+    src: url('font/PostNoBillsJaffna-ExtraBold.ttf') format('truetype');
+}
+
+body {
+    height: 100vh;
+    
+    background-color: black;
+    background-image: url(files/fundo.jpg);
+    background-size: 120vw;
+    background-attachment: fixed;
+    background-position-x: right;
+}
+
+.component-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    margin-left: 30vw;
+}
+
+.navb {
+    display: flex;
+
+    font-size: 24px;
+}
+
+.navb div {
+    display: flex;
+    align-items: center;
+    height: 86px;
+    gap: 50px;
+}
+
+.navb div a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+}
+
+.navb img {
+    width: 168px;
+    margin-top: 12px;
+    margin-left: 39px;
+}
+
+.slogan-card {
+    /*  estilo de slogan */
+    width: 50vw;
+    margin-right: 132px;
+    margin-top: calc(50vh - 134px - 168px);
+    margin-bottom: calc(50vh - 168px);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slogan-card h1 {
+    /* estilo titulo do slogan */
+    margin: 0px;
+
+    font-family: 'post-no-bills-jaffna-extrabold', sans-serif;
+    font-size: 120px;
+    line-height: 120px;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.slogan-card h2 {
+    font-size: 65px;
+    text-transform: uppercase;
+    font-family: 'post-no-bills-jaffna-extrabold', sans-serif;
+}
+
+.slogan-card p {
+    font-size: 30px;
+}
+
+#login-register-component, #products-component, #comodato-component, #contact-component, #change-password-component {
+    display: none;
+}
