@@ -47,6 +47,9 @@ body {
     margin-left: 39px;
 }
 
-#login-register-component, #services-component, #contact-component, #change-password-component {
+#login-register-component,
+#services-component,
+#contact-component,
+#change-password-component {
     display: none;
 }

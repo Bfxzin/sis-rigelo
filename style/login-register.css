@@ -21,7 +21,8 @@
     justify-content: space-between;
 }
 
-.box-login .entrar, .form-registro .register {
+.box-login .entrar,
+.form-registro .register {
     width: 286px;
     color: white;
     height: 88px;
@@ -33,14 +34,16 @@
     border-left: 1px solid rgb(46, 46, 46);
 }
 
-.box-login .entrar:hover,.form-registro .register:hover {
+.box-login .entrar:hover,
+.form-registro .register:hover {
     color: rgb(255, 255, 255);
     background-color: rgb(15, 15, 20);
     border-top: 1px solid rgb(44, 44, 44);
     border-left: 1px solid rgb(46, 46, 46);
 }
 
-.box-login .entrar:active,  .form-registro .register:active {
+.box-login .entrar:active,
+.form-registro .register:active {
     border: none;
 }
 

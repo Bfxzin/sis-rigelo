@@ -3,9 +3,9 @@
 $dbHost = 'localhost';
 $dbUsername = 'root';
 $dbPassword = '';
-$dbName = 'cadastro';
+$dbName = 'rigelo';
 
-$conexao = new mysqli($dbHost, $dbUsername, $dbPassword,$dbName);
+$conexao = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
 
 /* if($conexao->connect_errno)
 
@@ -16,5 +16,3 @@ else
 {
     echo 'conexao feita com sucesso';
 }  */
-    
-?>

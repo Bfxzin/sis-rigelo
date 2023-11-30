@@ -12,40 +12,37 @@
 
 body {
     height: 100vh;
-    
-    background-color: black;
-    background-image: url(files/fundo.jpg);
     background-size: 120vw;
+    background-color: black;
     background-attachment: fixed;
     background-position-x: right;
+    background-image: url(files/fundo.jpg);
 }
 
 .component-container {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-
     margin-left: 30vw;
+    align-items: flex-end;
+    flex-direction: column;
 }
 
 .navb {
     display: flex;
-
     font-size: 24px;
 }
 
 .navb div {
+    gap: 50px;
+    height: 86px;
     display: flex;
     align-items: center;
-    height: 86px;
-    gap: 50px;
 }
 
 .navb div a {
-    display: flex;
-    align-items: center;
     gap: 8px;
     color: white;
+    display: flex;
+    align-items: center;
 }
 
 .navb img {
@@ -57,25 +54,23 @@ body {
 .slogan-card {
     /*  estilo de slogan */
     width: 50vw;
-    margin-right: 132px;
-    margin-top: calc(50vh - 134px - 168px);
-    margin-bottom: calc(50vh - 168px);
     color: white;
-
     display: flex;
+    margin-right: 132px;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: calc(50vh - 168px);
+    margin-top: calc(50vh - 134px - 168px);
 }
 
 .slogan-card h1 {
     /* estilo titulo do slogan */
     margin: 0px;
-
-    font-family: 'post-no-bills-jaffna-extrabold', sans-serif;
     font-size: 120px;
     line-height: 120px;
     text-transform: uppercase;
     text-decoration: underline;
+    font-family: 'post-no-bills-jaffna-extrabold', sans-serif;
 }
 
 .slogan-card h2 {
@@ -88,6 +83,10 @@ body {
     font-size: 30px;
 }
 
-#login-register-component, #products-component, #comodato-component, #contact-component, #change-password-component {
+#login-register-component,
+#products-component,
+#comodato-component,
+#contact-component,
+#change-password-component {
     display: none;
 }
