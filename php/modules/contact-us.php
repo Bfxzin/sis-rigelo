@@ -25,13 +25,15 @@
   </li>
 </ul>
 
-<form action="#" method="post">
+<form action="php/functions/contato_registrar.php" method="post">
   <fieldset>
     <legend>Fale Conosco</legend>
-    <input type="text" placeholder="Como deseja ser chamado?">
-    <input type="email" placeholder="Digite seu e-mail">
-    <input type="tel" placeholder="Digite seu telefone">
-    <input type="text" placeholder="Qual seu interesse?">
-    <input type="submit" placeholder="Enviar">
+
+    <input type="text" name="nome" placeholder="Como deseja ser chamado?" required maxlength="100">
+    <input type="email" name="email" placeholder="Digite seu e-mail" required maxlength="100">
+    <input type="tel" name="telefone" placeholder="Digite seu telefone" required maxlength="30">
+    <input type="text" name="texto" placeholder="Qual seu interesse?" required maxlength="500">
+
+    <input type="submit">
   </fieldset>
 </form>

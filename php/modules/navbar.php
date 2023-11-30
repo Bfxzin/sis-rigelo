@@ -8,7 +8,7 @@
 
             <?php // Verificando se o usuário está logado
             if (isset($_SESSION["logado"])) {
-                echo '<a class="navbar-brand" href="#"><i class="fas fa-location-arrow"></i>Pedidos</a>';
+                echo '<a class="navbar-brand" href="pages/pedidos.php"><i class="fas fa-location-arrow"></i>Pedidos</a>';
 
                 echo '<a class="navbar-brand" href="php/session/usuario_deslogar.php"><i class="fas fa-user"></i>Deslogar</a>';
             } else
