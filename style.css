@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: 'post-no-bills-jaffna-extrabold';
-    src: url('font/PostNoBillsJaffna-ExtraBold.ttf') format('truetype');
+    src: url('static/font/PostNoBillsJaffna-ExtraBold.ttf') format('truetype');
 }
 
 body {
@@ -16,7 +16,7 @@ body {
     background-color: black;
     background-attachment: fixed;
     background-position-x: right;
-    background-image: url(files/fundo.jpg);
+    background-image: url(static/files/fundo.jpg);
 }
 
 .component-container {

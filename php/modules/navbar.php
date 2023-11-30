@@ -14,6 +14,6 @@
             ?>
         </div>
 
-        <a href="#" onclick="exibe_guia('btn_home_page')"><img src="files/logo.png" alt="Logo"></a>
+        <a href="#" onclick="exibe_guia('btn_home_page')"><img src="static/files/logo.png" alt="Logo"></a>
     </nav>
 </div>

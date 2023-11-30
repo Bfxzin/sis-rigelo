@@ -12,9 +12,10 @@ const loginContainer = `
   </div>
 
   <div class="button-container"> 
-    <a href="#" onclick="exibe_guia(\'btn_trocar_senha\')>Esqueci a senha</a><br><br>
-    <button class="register" type="button">Cadastre-se</button>
+    <a href="#" onclick="exibe_guia(\'btn_trocar_senha\')">Esqueci a senha</a><br><br>
+    <button class="form_login" onclick="altera_login()" type="button">Cadastre-se</button>
   </div>
+
   <button class="entrar" type="submit">Entrar</button>
 </form>
 </div>
@@ -71,6 +72,10 @@ const registerContainer = `
         <input type="tel" class="form-control" oninput="restrictInput(this, /[^0-9]/g, 9);" id="telefone" name="telefone" placeholder="15-981777432">
       </div>
 
+      <div class="button-container"> 
+        <button class="form_login" onclick="altera_login()" type="button">Cancelar</button>
+      </div>
+
       <button class="entrar" name="submit" id="submit" type="submit">Pronto</button>
     </form>
   </div>
@@ -78,18 +83,23 @@ const registerContainer = `
 `;
 
 function restrictInput(element, pattern, maxLength) { /* respeitando o padrao de caracteres */
-  element.value = element.value.replace(pattern, '');
+  element.value = element.value.replace(pattern, '')
 
   if (element.value.length > maxLength) /* respeitando a quantia de caracteres */
-    element.value = element.value.substring(0, maxLength);
+    element.value = element.value.substring(0, maxLength)
 }
 
-const component = document.querySelector('#login-register-component');
+const component = document.querySelector('#login-register-component')
 component.innerHTML = loginContainer;
 
-const button = document.querySelector('.register');
+// Altera entre as telas de login e cadastro
+function altera_login() {
 
-if (button)
-  button.onclick = () => {
-    component.innerHTML = registerContainer;
-  }
+  const component = document.querySelector('.form-registro')
+  const prancheta = document.querySelector('#login-register-component')
+
+  if (!component)
+    prancheta.innerHTML = registerContainer
+  else
+    prancheta.innerHTML = loginContainer
+}
