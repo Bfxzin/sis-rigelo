@@ -26,7 +26,7 @@ const registerContainer = `
   <h2>Registro</h2>
 
   <div class="table-register">
-    <form class="form-reginho" action="php/session/cadastrar_usuario.php" method="POST">
+    <form class="form-reginho" action="php/session/usuario_cadastro.php" method="POST">
       <div class="nomeum">
         <label for="inputname" class="form-label">Primeiro nome</label>
         <input type="text" class="form-control" oninput="restrictInput(this, /[^A-Za-z]/g, 70);" id="inputname" name="nome" placeholder="João" required>
@@ -37,17 +37,17 @@ const registerContainer = `
         <input type="text" class="form-control" oninput="restrictInput(this, /[^A-Za-z]/g, 120);" id="sobrenome" name="sobrenome" placeholder="Silva de Souza">
       </div>
 
-      <div class="emailr">
+      <div class="email">
         <label for="email" class="form-label">Email</label>
         <input type="email" class="form-control" maxlength="200" id="email" name="email" placeholder="email@example.com">
       </div>
 
-      <div class="senhac">
+      <div class="senha">
         <label for="senha" class="form-label">Senha</label>
         <input type="password" class="form-control" maxlength="32" id="senha" name="senha">
       </div>
 
-      <div class="senhac">
+      <div class="senha">
         <label for="senhaconfirm" class="form-label">Confirme sua senha</label>
         <input type="password" class="form-control" maxlength="32" id="senhaconfirm" name="senhaconfirm">
       </div>

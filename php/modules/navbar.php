@@ -7,9 +7,11 @@
             <a class="navbar-brand" href="#" onclick="exibe_guia('btn_contact')"><i class="fas fa-headphones"></i>Contato</a>
 
             <?php // Verificando se o usuário está logado
-            if (isset($_SESSION["logado"]))
+            if (isset($_SESSION["logado"])) {
+                echo '<a class="navbar-brand" href="#"><i class="fas fa-location-arrow"></i>Pedidos</a>';
+
                 echo '<a class="navbar-brand" href="php/session/usuario_deslogar.php"><i class="fas fa-user"></i>Deslogar</a>';
-            else
+            } else
                 echo '<a class="navbar-brand" href="#" onclick="exibe_guia(\'btn_login_registro\')"><i class="fas fa-user"></i>Entrar / Cadastre-se</a>';
             ?>
         </div>
