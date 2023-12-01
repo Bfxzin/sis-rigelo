@@ -48,8 +48,7 @@
   </div>
 
 
-
-
+  
 
   <footer class="copyright">
     <p>Todos os direitos reservados <a href="#">©Rigelo</a></p>
