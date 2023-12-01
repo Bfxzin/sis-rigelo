@@ -32,7 +32,8 @@ CREATE TABLE cadastro (
   nome varchar(70) NOT NULL,
   sobrenome varchar(120) NOT NULL,
   email varchar(200) NOT NULL
-) engine=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+ ) engine=InnoDB = InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 
 --
 -- Índices para tabelas despejadas
