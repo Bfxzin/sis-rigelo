@@ -10,7 +10,7 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="scriptjs/java.js"></script>
+    <script src="javascript/java.js"></script>
     <title>Rigelo</title>
 </head>
 
@@ -55,6 +55,6 @@
 
 </body>
 
-<script src="scriptjs/screen-register.js"></script> <!-- conexão javascript tela login-registro -->
+<script src="javascript/screen-register.js"></script> <!-- conexão javascript tela login-registro -->
 
 </html>
