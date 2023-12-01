@@ -5,7 +5,7 @@ echo '<nav class="navb">';
 echo '<div>';
 echo '<a class="navbar-brand" href="#" onclick="exibe_guia(\'btn_home_page\')"><i class="fas fa-home"></i>Início</a>';
 echo '<a class="navbar-brand" href="#" onclick="exibe_guia(\'btn_products\')"><i class="fas fa-shopping-cart"></i>Produtos</a>';
-echo '<a class="navbar-brand" href="#" onclick="exibe_guia(\'btn_comodato\')"><i class="fas fa-location-arrow"></i>Comodato</a>';
+echo '<a class="navbar-brand" href="#" onclick="exibe_guia(\'btn_comodato\')"><i class="fa-solid fa-pen-nib"></i>Comodato</a>';
 echo '<a class="navbar-brand" href="#" onclick="exibe_guia(\'btn_contact\')"><i class="fas fa-headphones"></i>Contato</a>';
 
 // Verificando se o usuário está logado

@@ -25,7 +25,10 @@
             <?php include_once "php/modules/navbar.php"; ?>
         </div>
 
-        <div id="login-register-component"></div>
+        <div id="login-register-component">
+            <?php include_once "php/modules/login.php" ?>
+            <?php include_once "php/modules/register.php" ?>
+        </div>
 
         <div id="products-component">
             <?php include_once "php/modules/products.php" ?>

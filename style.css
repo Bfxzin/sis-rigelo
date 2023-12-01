@@ -59,7 +59,7 @@ body {
     width: 50vw;
     margin-right: 132px;
     margin-top: calc(50vh - 134px - 168px);
-    margin-bottom: calc(50vh - 168px);
+    margin-bottom: calc(50vh - 150px);
     color: white;
 
     display: flex;
@@ -88,6 +88,308 @@ body {
     font-size: 30px;
 }
 
-#login-register-component, #products-component, #comodato-component, #contact-component, #change-password-component {
+.about-card {
+    margin-right: 10vw;
+    margin-bottom: 10vw;
+}
+
+.products-container {
+    margin-top: 5vw;
+    margin-right: 10vw;
+    margin-bottom: 10vw;
+}
+
+.products-container ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.products-container li {
+    display: flex;
+    
+    padding: 20px;
+    gap: 20px;
+
+    border: 1px solid #ffffff11;
+    list-style: none;
+}
+
+.products-container li img {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 250px;
+    max-height: 250px;
+}
+
+.products-container li > div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.products-container li div p {
+    flex-grow: 1;
+}
+
+.products-container li > div > div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.products-container input {
+    padding: 10px 20px;
+    background-color: #0f0f14;
+    border-bottom: 1px solid #050505;
+    border-right: 1px solid #050505;
+    border-top: 1px solid #2c2c2c;
+    border-left: 1px solid #2b2b2b;
+    transition: 1s;
+}
+
+.products-container input:hover {
+    transition-duration: 1s;
+    background-color: #16161f;
+}
+
+.products-container input:active {
+    border: 1px solid black;
+    transition: 0s;
+}
+
+.comodato-container {
+    margin-top: 5vw;
+    margin-right: 10vw;
+    margin-bottom: 10vw;
+}
+
+.comodato-container p {
+    margin-bottom: 50px;
+}
+
+.comodato-container a {
+    padding: 10px 20px;
+    
+    background-color: #eaf6fe;
+    border-bottom: 1px solid #050505;
+    border-right: 1px solid #050505;
+    border-top: 1px solid #2c2c2c;
+    border-left: 1px solid #2b2b2b;
+
+    color: black;
+    text-decoration: none;
+}
+
+.comodato-container a:hover {
+    padding: 10px 20px;
+
+    background-color: #dae9fc;
+
+    color: black;
+    text-decoration: none;
+}
+
+.comodato-container a:active {
+    padding: 10px 20px;
+
+    background-color: #b4c8e2;
+
+    color: black;
+    text-decoration: none;
+}
+
+.contact-us-container {
+    margin: 5vw 10vw 5vw 0;
+
+    display: flex;
+    align-items: center;
+    gap: 33px;
+}
+
+.contact-us-container > div > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.contact-us-container > div > ul li i {
+    margin-right: 12px;
+    width: 16px;
+    text-align: center;
+}
+
+.contact-us-container > div > ul li a {
+    color: white;
+    transition-duration: .3s;
+}
+
+.contact-us-container > div > ul li a:hover {
+    background-color: #ffffff20;
+    transition-duration: .3s;
+}
+
+.contact-us-container form {
+    padding: 50px;
+    min-width: 450px;
+    height: 525px;
+    border-radius: 10px;
+
+    background-color: #182032;
+}
+
+.contact-us-container form fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-us-container form fieldset legend {
+    margin-bottom: 30px;
+}
+
+.contact-us-container form fieldset input {
+    margin-bottom: 10px;
+    height: 45px;
+
+    background-color: #182032;
+    border: none;
+    border-bottom: 1px solid #ffffff20;
+}
+
+.contact-us-container form fieldset input:focus {
+    outline: none;
+}
+
+.contact-us-container form fieldset input[type="submit"] {
+    margin-top: 80px;
+    
+    background-color: #182032;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    transition-duration: .3s;
+}
+
+.contact-us-container form fieldset input[type="submit"]:hover {
+    background-color: #ffffff20;
+    transition-duration: .3s;
+}
+
+.contact-us-container form fieldset input[type="submit"]:active {
+    background-color: #00000030;
+    transition-duration: .1s;
+}
+
+#box-login {
+    margin: 5vw 371px 5vw 0;
+}
+
+#box-login form {
+    display: flex;
+    flex-direction: column;
+}
+
+#box-login form h2 {
+    align-self: center;
+    margin-bottom: 72px;
+}
+
+#box-login form input {
+    width: 518px;
+    height: 68px;
+    border-radius: 8px;
+}
+
+#box-login form .button-container {
+    margin-top: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#box-login form a {
+    color: white;
+}
+
+#box-login form .register {
+    width: 233px;
+    height: 45px;
+    border-radius: 40px;
+}
+
+#box-login form .entrar {
+    width: 286px;
+    height: 88px;
+    margin-top: 26px;
+    border-radius: 16px;
+}
+
+#box-login form .register,
+#box-login form .entrar {
+    align-self: center;
+    background-color: #0b0d0f;
+    border-top: 1px solid #2c2c2c;
+    border-left: 1px solid #2e2e2e;
+
+    transition-duration: .3s;
+}
+
+#box-login form .register:hover,
+#box-login form .entrar:hover {
+    background-color: #0f0f14;
+    border-top: 1px solid #2c2c2c;
+    border-left: 1px solid #2e2e2e;
+
+    transition-duration: .3s;
+}
+
+#box-login form .register:active,
+#box-login form .entrar:active {
+    border: none;
+}
+
+#form-registro .form-reginho {
+    width: 973px;
+    gap: 0px 43px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#form-registro .form-control {
+    height: 64px;
+    width: 465px;
+    padding: 10px;
+    border-radius: 1px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+}
+
+#form-registro .table-register button {
+    width: 465px;
+    height: 64px;
+    margin-top: 32px;
+    background-color: #0b0d0f;
+    border-top: 1px solid #2c2c2c;
+    border-left: 1px solid #2e2e2e;
+}
+
+#form-registro .table-register button:hover {
+    /* animação de transição de cor de botão  */
+    background-color: #0f0f14;
+    border-top: 1px solid #2c2c2c;
+    border-left: 1px solid #2e2e2e;
+}
+
+#form-registro .table-register button:active {
+    border: none;
+}
+
+#login-register-component,
+#products-component,
+#comodato-component,
+#contact-component,
+#change-password-component,
+#form-registro {
     display: none;
 }

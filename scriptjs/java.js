@@ -50,9 +50,14 @@ function exibe_guia(obj_alvo) {
     })
 
     // Mostrando novamente o alvo selecionado
-    if (alvo)
+    if (alvo) {
         if (alvo.style.display == "none")
             alvo.style.display = "block"
+    }
+    if (obj_alvo == "btn_login_registro") {
+        document.querySelector('#form-registro').style.display="none"
+        document.querySelector('#box-login').style.display="block"
+    }
 
     ult_alvo = obj_alvo
 }
