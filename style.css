@@ -91,3 +91,21 @@ body {
 #login-register-component, #products-component, #comodato-component, #contact-component, #change-password-component {
     display: none;
 }
+
+.about-card .about-img img{
+    height: 200px;
+    width: 300px;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+.about-card .about-img{
+    display: flex;
+    align-items: center;
+}
+
+.about-card .about-img p{
+    text-align: left;
+}
+
+
