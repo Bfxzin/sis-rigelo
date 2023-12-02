@@ -48,7 +48,7 @@
         <input type="tel" class="form-control" oninput="restrictInput(this, /[^0-9]/g, 9);" id="telefone" name="telefone" placeholder="15-981777432">
       </div>
 
-      <button class="entrar" name="submit" id="submit" type="submit">Enviar</button>
+      <button class="entrar" name="submit" id="submit" type="submit">Cadastrar!</button>
     </form>
   </div>
 </div>

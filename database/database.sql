@@ -17,6 +17,7 @@ create table cadastro (
 create table produto(
     id int NOT NULL PRIMARY KEY,
     nome varchar(200) NOT NULL,
+    foto_item varchar(200) NOT NULL,
     preco varchar(20) NOT NULL,
     descricao varchar(400) NOT NULL,
     quantidade int NOT NULL

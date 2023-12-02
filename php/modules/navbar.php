@@ -16,6 +16,6 @@ else
 
 echo '</div>';
 
-echo '<a href="#" onclick="exibe_guia(\'btn_home_page\')"><img src="files/logo.png" alt="Logo"></a>';
+echo '<a href="#" onclick="exibe_guia(\'btn_home_page\')"><img src="static/files/logo.png" alt="Logo"></a>';
 echo '</nav>';
 echo '</div>';

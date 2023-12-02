@@ -13,6 +13,6 @@ const button = document.querySelector('.register');
 if (button)
   button.onclick = () => {
     // component.innerHTML = registerContainer;
-    document.querySelector('#form-registro').style.display="block"
-    document.querySelector('#box-login').style.display="none"
+    document.querySelector('#form-registro').style.display = "block"
+    document.querySelector('#box-login').style.display = "none"
   }

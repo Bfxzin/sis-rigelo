@@ -5,5 +5,3 @@ if (!isset($_SESSION))
 
 // if (!isset($_SESSION["logado"]))
 // 	header("Location: ../../index.php");
-
-?>

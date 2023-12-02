@@ -1,5 +1,38 @@
 <div class="products-container">
     <ul>
+        <?php include_once "php/session/conexao.php";
+
+            // Verificando se não existe cadastro para o e-mail informado
+            $query = "SELECT * FROM produto";
+            $result = mysqli_query($conexao, $query);
+
+            if ($result->num_rows > 0){ // Itens salvos no banco de dados
+                while ($dados = $result->fetch_assoc()) {
+
+                    $id_produto = $dados["id"];
+                    $nome = $dados["nome"];
+                    // $foto_produto = $dados["foto_item"];
+
+                    $preco = $dados["preco"];
+                    $descricao = $dados["descricao"];
+                    $quantidade = $dados["quantidade"];
+
+                    echo "<li class='product-card'>
+                            <div>
+                                <h3>$nome</h3>
+                                <p>$descricao</p>
+                            <span>$quantidade unidades restantes</span>
+                                <div>
+                                    <span class='price'>R$ $preco</span>
+                                    <input type='submit' value='Adicionar ao Carrinho'>
+                                </div>
+                            </div>
+                        </li>";
+                }
+            } else
+                echo "Ainda não há produtos registrados!";
+        ?>
+
         <li class="product-card">
             <img src="/sis-rigelo/sis-rigelo/files/product-2,5kg.jpg" alt="Imagem do Produto">
             <div>

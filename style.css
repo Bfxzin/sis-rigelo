@@ -7,14 +7,14 @@
 
 @font-face {
     font-family: 'post-no-bills-jaffna-extrabold';
-    src: url('font/PostNoBillsJaffna-ExtraBold.ttf') format('truetype');
+    src: url('static/font/PostNoBillsJaffna-ExtraBold.ttf') format('truetype');
 }
 
 body {
     height: 100vh;
     
     background-color: black;
-    background-image: url(files/fundo.jpg);
+    background-image: url(static/files/fundo.jpg);
     background-size: 120vw;
     background-attachment: fixed;
     background-position-x: right;
@@ -410,4 +410,30 @@ body {
     text-align: left;
 }
 
+#menu_lateral_adm {
+    left: 0px;
+    width: 15%;
+    height: 100%;
+    position: fixed;
+    background-color: gray;
+    text-align: center;
+    padding-top: 15%;
+}
 
+#menu_lateral_adm > a {
+    color: white;
+    font-size: 25px;
+    transition: .5s;
+    text-decoration: none;
+    padding: 0px 50px 0px 50px;
+}
+
+#menu_lateral_adm > a:hover {
+    background-color: rgb(88, 88, 88);
+}
+
+#prancheta_produtos {
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 10%;
+}
