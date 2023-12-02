@@ -1,5 +1,6 @@
 <div class="products-container">
     <ul>
+        
         <?php include_once "php/session/conexao.php";
 
             // Verificando se não existe cadastro para o e-mail informado
@@ -29,12 +30,11 @@
                             </div>
                         </li>";
                 }
-            } else
-                echo "Ainda não há produtos registrados!";
+            } 
         ?>
 
         <li class="product-card">
-            <img src="/sis-rigelo/sis-rigelo/files/product-2,5kg.jpg" alt="Imagem do Produto">
+            <img src="static/files/product-2,5kg.jpg" alt="Imagem do Produto">
             <div>
                 <h3>Saco de gelo 2,5kg</h3>
                 <p>Saco de 2,5kg (Dois quilos e meio) de gelo em cubos, apropriado para o uso de resfriamento ou consumo.</p>
@@ -46,11 +46,11 @@
             </div>
         </li>
         <li class="product-card">
-            <img src="/sis-rigelo/sis-rigelo/files/product-5kg.png" alt="Imagem do Produto">
+            <img src="static/files/product-5kg.png" alt="Imagem do Produto">
             <div>
                 <h3>Saco de gelo 5kg</h3>
                 <p>Saco de 5kg (Cinco quilos) de gelo em cubos, apropriado para o uso de resfriamento ou consumo.</p>
-            <span>Compra a cima de 30 unidades -</span>
+                <span>Compra a cima de 30 unidades -</span>
                 <div>
                     <span class="price">R$ 5,99</span>
                     <input type="submit" value="Adicionar ao Carrinho">
@@ -58,11 +58,11 @@
             </div>
         </li>
         <li class="product-card">
-            <img src="/sis-rigelo/sis-rigelo/files/product-10kg.png" alt="Imagem do Produto">
+            <img src="static/files/product-10kg.png" alt="Imagem do Produto">
             <div>
                 <h3>Saco de gelo 10kg</h3>
                 <p>Saco de 10kg (Dez quilos) de gelo em cubos, apropriado para o uso de resfriamento ou consumo.</p>
-            <span>Compra a cima de 10</span>
+                <span>Compra a cima de 10</span>
                 <div>
                     <span class="price">R$ 8,99</span>
                     <input type="submit" value="Adicionar ao Carrinho">
@@ -70,7 +70,7 @@
             </div>
         </li>
         <li class="product-card">
-            <img src="/sis-rigelo/sis-rigelo/files/product-12kg.png" alt="Imagem do Produto">
+            <img src="static/files/product-12kg.png" alt="Imagem do Produto">
             <div>
                 <h3>Saco de gelo 12kg</h3>
                 <p>Saco de 12kg (Doze quilos) de gelo triturado, apropriado para o uso de resfriamentom, NÃO APROPRIADO PARA  CONSUMO.</p>

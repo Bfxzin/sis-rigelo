@@ -1,6 +1,6 @@
-create database rigelo;
+-- create database rigelo;
 
-use rigelo;
+-- use rigelo;
 
 create table cadastro (
     idc int NOT NULL PRIMARY KEY,
