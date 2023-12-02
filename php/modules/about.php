@@ -14,7 +14,7 @@
     colaboração!</p>
 
   <div class="about-img">
-    <img src="/sis-rigelo/sis-rigelo/files/ilustrativa-1.png" alt="">
+    <img src="static/files/ilustrativa-1.png" alt="">
     <P>
       A Rigelo é reconhecida por oferecer gelo de alta qualidade, produzido a partir de água de poço submetida a
       rigorosos processos de filtragem. Todos os nossos fornecedores são extremamente cautelosos em relação à higiene,
@@ -27,7 +27,7 @@
 
   <div class="about-vde">
     <h2>Veja a produção de um de nossos parceiros!</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/1AuIcvAXBas?si=lbYfvib0Bl38HKgU"
+    <iframe width="560" height="" src="https://www.youtube.com/embed/1AuIcvAXBas?si=lbYfvib0Bl38HKgU"
       title="YouTube video player" frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen>
@@ -35,15 +35,17 @@
   </div>
   
   <div class="location-point">
-  <h2>Localização da distribuidora Rigelo</h2>
-    <img src="/sis-rigelo/sis-rigelo/files/front-location.jpg" alt="">
-
+    <h2>Localização da distribuidora Rigelo</h2>
     <div class="iframe-location">
-      <p>Av. Betsaida, 56 - Jardim Betania, Sorocaba - SP 18071-490</p>
+      <img src="static/files/front-location.jpg" alt="">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.8486472080717!2d-47.500631488250804!3d-23.4659233580063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c5f4fa7f6f7525%3A0x6fd47e77674a5251!2sAv.%20Betsaida%2C%2056%20-%20Jardim%20Betania%2C%20Sorocaba%20-%20SP%2C%2018071-490!5e0!3m2!1spt-BR!2sbr!4v1701441380346!5m2!1spt-BR!2sbr"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.8486472080717!2d-47.500631488250804!3d-23.4659233580063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c5f4fa7f6f7525%3A0x6fd47e77674a5251!2sAv.%20Betsaida%2C%2056%20-%20Jardim%20Betania%2C%20Sorocaba%20-%20SP%2C%2018071-490!5e0!3m2!1spt-BR!2sbr!4v1701441380346!5m2!1spt-BR!2sbr"
+      width="" height="" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div class="location-text">
+      <i class="fa-solid fa-location-dot"></i>
+      <p>Av. Betsaida, 56 - Jardim Betania, Sorocaba - SP 18071-490</p>
     </div>
   </div>
 

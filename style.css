@@ -12,7 +12,7 @@
 
 body {
     height: 100vh;
-    
+
     background-color: black;
     background-image: url(static/files/fundo.jpg);
     background-size: 120vw;
@@ -91,6 +91,78 @@ body {
 .about-card {
     margin-right: 10vw;
     margin-bottom: 10vw;
+    max-width: 60vw;
+}
+
+.about-card .about-img {
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.about-card .about-img img {
+    height: 200px;
+    width: 300px;
+    margin-right: 20px;
+}
+
+.about-card .about-vde,
+.about-card .location-point {
+    margin-bottom: 100px;
+    padding: 50px;
+    border-radius: 10px;
+    background-color: #0d121c;
+    box-shadow: 0 0 15px #00000080;
+}
+
+.about-card .about-vde {
+    text-align: center;
+}
+
+.about-card .about-vde h2 {
+    margin-bottom: 25px;
+}
+
+.about-card .about-vde iframe {
+    width: 900px;
+    height: 506px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px #00000080;
+}
+
+.about-card .location-point h2 {
+    margin-bottom: 25px;
+}
+
+.about-card .location-point .iframe-location {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-card .location-point img,
+.about-card .location-point iframe {
+    width: calc((60vw - 150px) / 2);
+    margin-bottom: 25px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px #00000080;
+}
+
+.about-card .location-point .location-text {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.about-card .location-point .location-text p {
+    margin: 0;
+}
+
+.about-card footer {
+    text-align: center;
+}
+
+.about-card footer a {
+    color: white;
 }
 
 .products-container {
@@ -107,7 +179,7 @@ body {
 
 .products-container li {
     display: flex;
-    
+
     padding: 20px;
     gap: 20px;
 
@@ -122,7 +194,8 @@ body {
     max-height: 250px;
 }
 
-.products-container li > div {
+.products-container li>div {
+    flex-grow: 2;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -132,7 +205,7 @@ body {
     flex-grow: 1;
 }
 
-.products-container li > div > div {
+.products-container li>div>div {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -171,7 +244,7 @@ body {
 
 .comodato-container a {
     padding: 10px 20px;
-    
+
     background-color: #eaf6fe;
     border-bottom: 1px solid #050505;
     border-right: 1px solid #050505;
@@ -208,51 +281,56 @@ body {
     gap: 33px;
 }
 
-.contact-us-container > div > ul {
+.contact-us-container>div>ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.contact-us-container > div > ul li i {
+.contact-us-container>div>ul li i {
     margin-right: 12px;
     width: 16px;
     text-align: center;
 }
 
-.contact-us-container > div > ul li a {
+.contact-us-container>div>ul li a {
     color: white;
     transition-duration: .3s;
 }
 
-.contact-us-container > div > ul li a:hover {
+.contact-us-container>div>ul li a:hover {
     background-color: #ffffff20;
     transition-duration: .3s;
 }
 
-.contact-us-container form, #prancheta_produtos form {
+.contact-us-container form,
+#prancheta_produtos form {
     padding: 50px;
     min-width: 450px;
     height: 525px;
     border-radius: 10px;
 
     background-color: #182032;
+    box-shadow: 0 0 15px #00000080;
 }
 
-#prancheta_produtos form{
+#prancheta_produtos form {
     background-color: #1e222b;
 }
 
-.contact-us-container form fieldset, #prancheta_produtos form fieldset {
+.contact-us-container form fieldset,
+#prancheta_produtos form fieldset {
     display: flex;
     flex-direction: column;
 }
 
-.contact-us-container form fieldset legend, #prancheta_produtos form fieldset legend {
+.contact-us-container form fieldset legend,
+#prancheta_produtos form fieldset legend {
     margin-bottom: 30px;
 }
 
-.contact-us-container form fieldset input, #prancheta_produtos form fieldset input {
+.contact-us-container form fieldset input,
+#prancheta_produtos form fieldset input {
     margin-bottom: 10px;
     height: 45px;
 
@@ -261,29 +339,33 @@ body {
     border-bottom: 1px solid #ffffff20;
 }
 
-#prancheta_produtos form fieldset input{
+#prancheta_produtos form fieldset input {
     background-color: #1e222b;
 }
 
-.contact-us-container form fieldset input:focus, #prancheta_produtos form fieldset input:focus {
+.contact-us-container form fieldset input:focus,
+#prancheta_produtos form fieldset input:focus {
     outline: none;
 }
 
-.contact-us-container form fieldset input[type="submit"] , #prancheta_produtos form fieldset input[type="submit"] {
+.contact-us-container form fieldset input[type="submit"],
+#prancheta_produtos form fieldset input[type="submit"] {
     margin-top: 80px;
-    
+
     background-color: #182032;
     border: 1px solid #ffffff;
     border-radius: 30px;
     transition-duration: .3s;
 }
 
-.contact-us-container form fieldset input[type="submit"]:hover, #prancheta_produtos form fieldset input[type="submit"]:hover {
+.contact-us-container form fieldset input[type="submit"]:hover,
+#prancheta_produtos form fieldset input[type="submit"]:hover {
     background-color: #ffffff20;
     transition-duration: .3s;
 }
 
-.contact-us-container form fieldset input[type="submit"]:active, #prancheta_produtos form fieldset input[type="submit"]:active {
+.contact-us-container form fieldset input[type="submit"]:active,
+#prancheta_produtos form fieldset input[type="submit"]:active {
     background-color: #00000030;
     transition-duration: .1s;
 }
@@ -356,6 +438,10 @@ body {
     border: none;
 }
 
+#form-registro {
+    margin-right: 8vw;
+}
+
 #form-registro .form-reginho {
     width: 973px;
     gap: 0px 43px;
@@ -393,29 +479,61 @@ body {
     border: none;
 }
 
-#login-register-component,
-#products-component,
-#comodato-component,
-#contact-component,
-#change-password-component,
-#form-registro {
-    display: none;
+.change-password-card {
+    margin: 5vw 400px 5vw 0;
+    padding: 50px;
+    width: 450px;
+    height: 525px;
+    border-radius: 10px;
+
+    background-color: #182032;
+    box-shadow: 0 0 15px #00000080;
 }
 
-.about-card .about-img img{
-    height: 200px;
-    width: 300px;
-    margin-right: 20px;
-    vertical-align: middle;
+.change-password-card h2 {
+    margin-bottom: 30px;
 }
 
-.about-card .about-img{
+.change-password-card p {
+    margin: 16px 0;
+}
+
+.change-password-card form {
     display: flex;
-    align-items: center;
+    flex-direction: column;
 }
 
-.about-card .about-img p{
-    text-align: left;
+.change-password-card input {
+    margin: 10px 0;
+    height: 45px;
+
+    background-color: #182032;
+    border: none;
+    border-bottom: 1px solid #ffffff20;
+}
+
+.change-password-card input:focus {
+    outline: none;
+}
+
+.change-password-card button {
+    margin-top: 80px;
+    height: 45px;
+
+    background-color: #182032;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    transition-duration: .3s;
+}
+
+.change-password-card button:hover {
+    background-color: #ffffff20;
+    transition-duration: .3s;
+}
+
+.change-password-card button:active {
+    background-color: #00000030;
+    transition-duration: .1s;
 }
 
 #menu_lateral_adm {
@@ -428,7 +546,7 @@ body {
     background-color: gray;
 }
 
-#menu_lateral_adm > a {
+#menu_lateral_adm>a {
     color: white;
     font-size: 25px;
     transition: .5s;
@@ -436,11 +554,12 @@ body {
     padding: 0px 50px 0px 50px;
 }
 
-#menu_lateral_adm > a:hover {
+#menu_lateral_adm>a:hover {
     background-color: rgb(88, 88, 88);
 }
 
-#prancheta_produtos, #lista_produtos {
+#prancheta_produtos,
+#lista_produtos {
     width: 60%;
     margin-left: 20%;
     margin-top: 10%;
@@ -450,7 +569,7 @@ body {
     display: none;
 }
 
-.icon_excluir{
+.icon_excluir {
     width: 40px;
     height: 45px;
     padding: 10px;
@@ -462,15 +581,15 @@ body {
     background-color: rgb(212, 98, 98);
 }
 
-.icon_excluir:hover{
+.icon_excluir:hover {
     background-color: rgb(172, 79, 79);
 }
 
-.icon_excluir_prancheta_editar_produto{
+.icon_excluir_prancheta_editar_produto {
     margin-left: 50%;
 }
 
-#lista_produtos{
+#lista_produtos {
     height: auto;
     padding-top: 3%;
     padding-left: 3%;
@@ -478,7 +597,16 @@ body {
     background-color: #1e222b;
 }
 
-.card_item_estoque{
+.card_item_estoque {
     width: 100%;
     border: solid 0px 0px 20px 0px gray;
+}
+
+#login-register-component,
+#products-component,
+#comodato-component,
+#contact-component,
+#change-password-component,
+#form-registro {
+    display: none;
 }
