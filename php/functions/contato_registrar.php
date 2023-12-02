@@ -1,4 +1,4 @@
-<?php require_once "conexao.php";
+<?php require_once "../session/conexao.php";
 
 $nome = $_POST["nome"];
 $email = $_POST["email"];

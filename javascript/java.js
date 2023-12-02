@@ -37,7 +37,10 @@ function exibe_guia(obj_alvo) {
         "btn_products": "products-component",
         "btn_comodato": "comodato-component",
         "btn_contact": "contact-component",
-        "btn_trocar_senha": "change-password-component"
+        "btn_trocar_senha": "change-password-component",
+        "btn_cadastra_produto": "prancheta_produtos",
+        "btn_exibe_pedidos": "lista_pedidos",
+        "btn_exibe_estoque": "lista_produtos"
     }
 
     const alvo = document.getElementById(cases[obj_alvo])

@@ -11,13 +11,14 @@
 
                     $id_produto = $dados["id"];
                     $nome = $dados["nome"];
-                    // $foto_produto = $dados["foto_item"];
+                    $foto_produto = $dados["foto_item"];
 
                     $preco = $dados["preco"];
                     $descricao = $dados["descricao"];
                     $quantidade = $dados["quantidade"];
 
                     echo "<li class='product-card'>
+                            <img src='static/files/produtos/$foto_produto' alt='$nome'>
                             <div>
                                 <h3>$nome</h3>
                                 <p>$descricao</p>
@@ -29,8 +30,7 @@
                             </div>
                         </li>";
                 }
-            } else
-                echo "Ainda não há produtos registrados!";
+            }
         ?>
 
         <li class="product-card">

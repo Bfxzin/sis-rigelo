@@ -2,7 +2,7 @@
   <h2>Registro</h2>
 
   <div class="table-register">
-    <form class="form-reginho" action="php/session/cadastrar_usuario.php" method="POST">
+    <form class="form-reginho" action="php/session/usuario_cadastro.php" method="POST">
       <div class="nomeum">
         <label for="inputname" class="form-label">Primeiro nome</label>
         <input type="text" class="form-control" oninput="restrictInput(this, /[^A-Za-z]/g, 70);" id="inputname" name="nome" placeholder="João" required>

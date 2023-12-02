@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="../style.css">
-    <script src="javascript/java.js"></script>
+    <script src="../javascript/java.js"></script>
+
     <title>Painel de moderação</title>
 </head>
 
@@ -17,87 +18,89 @@
     <div class="component-container">
 
         <?php // Verificando se o usuário está logado
-        include_once "../php/session/sessao_verificar.php"; ?>
+        include_once "../php/session/sessao_verificar_interno.php";
+        include_once "../php/session/conexao.php"; ?>
 
         <div id="menu_lateral_adm">
-            <a href="#">Painel</a> <br>
-            <a href="#">Produtos</a> <br>
-            <a href="#">Pedidos</a> <br>
-            <a href="#">Estoque</a> <br><br>
-            <a href="#">Deslogar</a>
+
+            <img src="../static/files/logo.png" style="width: 80%">
+
+            <br><br><br><br>
+
+            <a href="#" onclick="exibe_guia('btn_cadastra_produto')">Produtos</a> <br>
+            <a href="#" onclick="exibe_guia('btn_exibe_estoque')">Estoque</a> <br>
+            <a href="#" onclick="exibe_guia('btn_exibe_pedidos')">Pedidos</a> <br><br>
+            <a href="../php/session/usuario_deslogar.php">Deslogar</a>
         </div>
     </div>
 
     <div id="prancheta_produtos">
-        <button>Adicionar produto</button>
+        <h1>Cadastro de produtos</h1>
+        <form action="../php/functions/item_registrar.php" enctype="multipart/form-data" method="POST">
+            <fieldset>
+                <legend>Cadastrar produto</legend>
+                <input type="text" oninput="restrictInput(this, /[^A-Za-z]/g, 70);" required name="nome" placeholder="Nome do produto">
+                <input type="text" name="descricao" maxlength="400" required placeholder="Descrição">
+                <input type="text" name="preco" oninput="restrictInput(this, /[^0-9]/g, 14);" required placeholder="Preço">
+                <input type="number" name="estoque" oninput="restrictInput(this, /[^0-9]/g, 14);" required placeholder="Quantidade em estoque">
 
-        <form class="form-reginho" action="../php/functions/item_registrar.php" method="POST">
-            <div class="nome">
-                <label for="inputname" class="form-label">Nome do item</label>
-                <input type="text" class="form-control" oninput="restrictInput(this, /[^A-Za-z]/g, 70);" id="inputname" name="nome" placeholder="Gelo" required>
-            </div>
+                <input type="file" name="img" accept="image/*" id="input_foto_produto" required>
 
-            <div class="foto">
-                <label for="foto" class="form-label">Foto</label>
-                <input type="file" name="foto" id="foto" required>
-            </div>
-
-            <div class="preco">
-                <label for="preco" class="form-label">Preço</label>
-                <input type="text" class="form-control" id="preco" name="preco" required>
-            </div>
-
-            <div class="descricao">
-                <label for="descricao" class="form-label">Descrição do produto</label>
-                <input type="text" class="form-control" maxlength="400" id="descricao" name="descricao">
-            </div>
-
-            <div class="estoque">
-                <label for="estoque" class="form-label">Quantidade em estoque</label>
-                <input type="number" class="form-control" oninput="restrictInput(this, /[^0-9]/g, 14);" id="estoque" name="estoque">
-            </div>
-
-            <button class="entrar" name="submit" id="submit" type="submit">Cadastrar!</button>
+                <input type="submit" value="Cadastrar produto">
+            </fieldset>
         </form>
+    </div>
 
-        <div id="lista_produtos">
+    <div id="lista_pedidos">
 
-            <div class="products-container">
-                <ul>
-                    <?php include_once "../php/session/conexao.php";
+        <?php
+        $query = "SELECT * FROM pedido order by id desc";
+        $result = mysqli_query($conexao, $query);
 
-                    // Verificando se não existe cadastro para o e-mail informado
-                    $query = "SELECT * FROM produto";
-                    $result = mysqli_query($conexao, $query);
+        if ($result->num_rows > 1) // Itens salvos no banco de dados
+            echo "Ainda não há produtos registrados!"; ?>
+    </div>
 
-                    if ($result->num_rows > 0) { // Itens salvos no banco de dados
-                        while ($dados = $result->fetch_assoc()) {
 
-                            $id_produto = $dados["id"];
-                            $nome = $dados["nome"];
-                            // $foto_produto = $dados["foto_item"];
+    <div id="lista_produtos">
+        <h1>Produtos do estoque</h1>
 
-                            $preco = $dados["preco"];
-                            $descricao = $dados["descricao"];
-                            $quantidade = $dados["quantidade"];
+        <div class="products-container">
+            <ul>
+                <?php
+                $query = "SELECT * FROM produto order by id desc";
+                $result = mysqli_query($conexao, $query);
 
-                            echo "<li class='product-card'>
+                if ($result->num_rows > 0) { // Itens salvos no banco de dados
+                    while ($dados = $result->fetch_assoc()) {
+
+                        $id_produto = $dados["id"];
+                        $nome = $dados["nome"];
+                        $foto_produto = $dados["foto_item"];
+
+                        $preco = $dados["preco"];
+                        $descricao = $dados["descricao"];
+                        $quantidade = $dados["quantidade"];
+
+                        echo "<li class='product-card'>
+                                    <img src='../static/files/produtos/$foto_produto' alt='$nome'>
                                     <div>
                                         <h3>$nome</h3>
                                         <p>$descricao</p>
-                                    <span>$quantidade unidades restantes</span>
+                                        <span>$quantidade unidades restantes</span>
                                         <div>
                                             <span class='price'>R$ $preco</span>
-                                            <input type='submit' value='Adicionar ao Carrinho'>
+                                            <a type='button' href='../php/cached/produto_atualizar.php?id=$id_produto'><input type='submit' value='Editar produto'></a>
                                         </div>
                                     </div>
+
+                                    <a class='icon_excluir' href='../php/functions/item_excluir.php?id=$id_produto'><i class='fa-solid fa-trash'></i></a>
                                 </li>";
-                        }
-                    } else
-                        echo "Ainda não há produtos registrados!";
-                    ?>
-                </ul>
-            </div>
+                    }
+                } else
+                    echo "Ainda não há produtos registrados!";
+                ?>
+            </ul>
         </div>
     </div>
 </body>

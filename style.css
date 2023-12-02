@@ -230,7 +230,7 @@ body {
     transition-duration: .3s;
 }
 
-.contact-us-container form {
+.contact-us-container form, #prancheta_produtos form {
     padding: 50px;
     min-width: 450px;
     height: 525px;
@@ -239,16 +239,20 @@ body {
     background-color: #182032;
 }
 
-.contact-us-container form fieldset {
+#prancheta_produtos form{
+    background-color: #1e222b;
+}
+
+.contact-us-container form fieldset, #prancheta_produtos form fieldset {
     display: flex;
     flex-direction: column;
 }
 
-.contact-us-container form fieldset legend {
+.contact-us-container form fieldset legend, #prancheta_produtos form fieldset legend {
     margin-bottom: 30px;
 }
 
-.contact-us-container form fieldset input {
+.contact-us-container form fieldset input, #prancheta_produtos form fieldset input {
     margin-bottom: 10px;
     height: 45px;
 
@@ -257,11 +261,15 @@ body {
     border-bottom: 1px solid #ffffff20;
 }
 
-.contact-us-container form fieldset input:focus {
+#prancheta_produtos form fieldset input{
+    background-color: #1e222b;
+}
+
+.contact-us-container form fieldset input:focus, #prancheta_produtos form fieldset input:focus {
     outline: none;
 }
 
-.contact-us-container form fieldset input[type="submit"] {
+.contact-us-container form fieldset input[type="submit"] , #prancheta_produtos form fieldset input[type="submit"] {
     margin-top: 80px;
     
     background-color: #182032;
@@ -270,12 +278,12 @@ body {
     transition-duration: .3s;
 }
 
-.contact-us-container form fieldset input[type="submit"]:hover {
+.contact-us-container form fieldset input[type="submit"]:hover, #prancheta_produtos form fieldset input[type="submit"]:hover {
     background-color: #ffffff20;
     transition-duration: .3s;
 }
 
-.contact-us-container form fieldset input[type="submit"]:active {
+.contact-us-container form fieldset input[type="submit"]:active, #prancheta_produtos form fieldset input[type="submit"]:active {
     background-color: #00000030;
     transition-duration: .1s;
 }
@@ -415,9 +423,9 @@ body {
     width: 15%;
     height: 100%;
     position: fixed;
-    background-color: gray;
+    padding-top: 3%;
     text-align: center;
-    padding-top: 15%;
+    background-color: gray;
 }
 
 #menu_lateral_adm > a {
@@ -432,8 +440,45 @@ body {
     background-color: rgb(88, 88, 88);
 }
 
-#prancheta_produtos {
+#prancheta_produtos, #lista_produtos {
     width: 60%;
     margin-left: 20%;
     margin-top: 10%;
+}
+
+#input_id_item {
+    display: none;
+}
+
+.icon_excluir{
+    width: 40px;
+    height: 45px;
+    padding: 10px;
+    transition: .2s;
+    border-radius: 5px;
+    text-align: center;
+    position: absolute;
+    box-shadow: 0 0 15px black;
+    background-color: rgb(212, 98, 98);
+}
+
+.icon_excluir:hover{
+    background-color: rgb(172, 79, 79);
+}
+
+.icon_excluir_prancheta_editar_produto{
+    margin-left: 50%;
+}
+
+#lista_produtos{
+    height: auto;
+    padding-top: 3%;
+    padding-left: 3%;
+    border-radius: 15px;
+    background-color: #1e222b;
+}
+
+.card_item_estoque{
+    width: 100%;
+    border: solid 0px 0px 20px 0px gray;
 }
